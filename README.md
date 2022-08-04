@@ -24,7 +24,11 @@
 
 ## Live Demo
 
-[Coming Soon](https://moraad97.github.io/To-Do-List)
+[heroku](https://where-in-the-world-react.herokuapp.com/).
+[netlify](https://62eba0ab4644760442bdc44c--lovely-phoenix-26cb52.netlify.app/).
+
+## Video
+Watch this [video](https://www.loom.com/share/c01cba25331e4a86bcf7b8f8817e3772) learn more about the project features.
 
 ## Getting Started
 
