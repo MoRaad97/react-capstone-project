@@ -1,56 +1,47 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Where In The World?
 
-> Description the project.
+> A website that help you get the information's (population, name, region, capital and more) about any country in the world, you can search for a country or filter countries by region and there are 2 cool themes that you can switch between.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML & CSS
+- JavaScript
+- React js
+- Redux & Redux toolkit
+- React Testing library & Jest test.
+- Git & GitHub
+- axios
 
-## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+## Design
 
+- [Design](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
+
+- Frontend Mentor [REST Countries API with color theme switcher](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca)
+
+## Live Demo
+
+[Coming Soon](https://moraad97.github.io/To-Do-List)
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+To get a local copy up and running follow these simple steps.
 
+- Clone the project `$ git clone https://github.com/MoRaad97/react-capstone-project.git`
+- Open your project in VS code of any text editor that you love to use.
+- Install node js `npm install`
+- you can bulid the project `npm run build` and run it using the browser or live server or you can run it using `npm run start`.
 
-To get a local copy up and running follow these simple example steps.
+## Author
 
-### Prerequisites
+👤 **Mohammed Raad**
 
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@MoRaad97](https://github.com/MoRaad97)
+- Twitter: [@MohammedRaadz](https://twitter.com/MohammedRaadz)
+- LinkedIn: [Mohammed Raad](linkedin.com/in/mohammed-raad-600176210)
 
 ## 🤝 Contributing
 
@@ -64,10 +55,6 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.
+- Microverse Team.
+- Micronaots.
+- Microverse community.
