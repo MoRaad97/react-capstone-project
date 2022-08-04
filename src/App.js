@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
-import { useDispatch } from "react-redux/es/exports";
-import { loadDataThunk } from "./Redux/mainReducer";
+import { useDispatch } from "react-redux";
+import { loadDataThunk } from "./Redux/Data_Reducer";
 
 
 function App() {
