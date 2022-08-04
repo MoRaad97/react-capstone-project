@@ -19,8 +19,8 @@ const DataSlice = createSlice({
   extraReducers: {
     [loadDataThunk.fulfilled]: (state, action) => {
       const newState = action.payload.map((object) => {
-        const loadedLanguages = []
-        for (const key in object.languages) {
+        const loadedLanguages = [];
+        for (const key in object.languages) { // eslint-disable-line
           loadedLanguages.push(object.languages[key]);
         }
         return ({
@@ -35,7 +35,7 @@ const DataSlice = createSlice({
           tld: object.tld,
           languages: loadedLanguages.toString(),
           latlng: `[${object.latlng}]`,
-        })
+        });
       });
       return newState;
     },

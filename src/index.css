@@ -17,12 +17,14 @@ body {
     width: 750px;
   }
 }
+
 /* medium */
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
 }
+
 /* large */
 @media (min-width: 1200px) {
   .container {

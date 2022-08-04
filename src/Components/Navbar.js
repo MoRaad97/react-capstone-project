@@ -1,16 +1,25 @@
-import React from "react";
-import './style/Navbar.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import './style/Navbar.css';
 
-const Navbar = (props) => {
-  return (
-    <nav className={props.theme === "default" ? 'navbar df-nav' : 'navbar'}>
-      <div className="container">
-        <h1>Where in the world?</h1>
-        {props.theme === "default" && <h2 onClick={props.themeSwitch}>White Theme</h2>}
-        {props.theme === "white" && <h2 onClick={props.themeSwitch}>Default Theme</h2>}
-      </div>
+const Navbar = ({ themeSwitch, theme = 'default' }) => (
+  <nav className={theme === 'default' ? 'navbar df-nav' : 'navbar'}>
+    <div className="container">
+      <h1>Where in the world?</h1>
+      {theme === 'default' && <div onClick={themeSwitch} onKeyDown={themeSwitch} role="button" tabIndex={0}>White Theme</div>}
+      {theme === 'white' && <div onClick={themeSwitch} onKeyDown={themeSwitch} role="button" tabIndex={-1}>Default Theme</div>}
+    </div>
 
-    </nav>
-  )
-}
-export default Navbar
+  </nav>
+);
+export default Navbar;
+
+Navbar.propTypes = {
+  theme: PropTypes.string,
+  themeSwitch: PropTypes.func,
+};
+
+Navbar.defaultProps = {
+  theme: 'default',
+  themeSwitch: undefined,
+};
