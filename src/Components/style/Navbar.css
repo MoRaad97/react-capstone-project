@@ -21,7 +21,8 @@
   font-family: "Gill Sans", sans-serif;
   font-weight: 900;
 }
-.navbar h2 {
+
+.navbar > .container > div {
   margin: 0;
   font-size: 18px;
   font-weight: 700;

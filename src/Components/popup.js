@@ -4,18 +4,19 @@ import PropTypes from 'prop-types';
 import './style/Popup.css';
 
 const Popup = ({
-  trigger, keyId, theme, closePopup,
+  trigger = false, keyId = null, theme = 'default', closePopup,
 }) => {
   const countries = useSelector((state) => state.countries);
   return trigger ? (
     <>
-      {countries.map((country) => {
+      {countries.map((country) => { // eslint-disable-line
         if (keyId === country.id) {
           return (
             <section className={theme === 'default' ? 'popup popup-df' : 'popup'} key={country.id}>
               <div className="container">
                 <button
                   className={theme === 'default' ? 'close-btn close-btn-df' : 'close-btn'}
+                  type="button"
                   onClick={() => closePopup()}
                   onKeyDown={() => closePopup()}
                 >
@@ -84,4 +85,11 @@ Popup.propTypes = {
   keyId: PropTypes.string,
   closePopup: PropTypes.func,
   theme: PropTypes.string,
+};
+
+Popup.defaultProps = {
+  theme: 'default',
+  trigger: false,
+  keyId: null,
+  closePopup: undefined,
 };

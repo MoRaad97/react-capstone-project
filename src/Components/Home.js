@@ -3,8 +3,9 @@ import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import Popup from './popup';
 import './style/Home.css';
+/* tslint:disable: array-callback-return consistent-return  */
 
-const Home = ({ theme }) => {
+const Home = ({ theme = 'default' }) => {
   const [State, setState] = useState({
     filter: 'All',
     search: '',
@@ -37,6 +38,7 @@ const Home = ({ theme }) => {
   };
 
   const handleSearch = (e) => {
+    e.preventDefault();
     const { value } = e.target;
     let newValue;
     if (value) {
@@ -71,7 +73,7 @@ const Home = ({ theme }) => {
     <section className={theme === 'default' ? 'home home-df' : 'home'}>
       <Popup trigger={State.popup} keyId={State.keyId} closePopup={closePopup} theme={theme} />
       <div className="container">
-        <form action="">
+        <form onSubmit={(e) => e.preventDefault()}>
           <div className="SearchBar-container" onChange={handleSearch} onBlur={handleSearch}>
             <input type="search" placeholder="Search for a country" />
           </div>
@@ -96,7 +98,7 @@ const Home = ({ theme }) => {
           &#8593;
         </button>
         <div className="cards-container">
-          {countries.map((country) => {
+          {countries.map((country) => { // eslint-disable-line
             if (State.filter === country.region) {
               if (State.search === '') {
                 return (
@@ -106,6 +108,8 @@ const Home = ({ theme }) => {
                     id={country.id}
                     onClick={openPopup}
                     onKeyDown={openPopup}
+                    role="button"
+                    tabIndex={-8}
                   >
                     <img src={country.image} alt={country.name} />
                     <div className="data-container">
@@ -137,6 +141,8 @@ const Home = ({ theme }) => {
                     id={country.id}
                     onClick={openPopup}
                     onKeyDown={openPopup}
+                    role="button"
+                    tabIndex={-7}
                   >
                     <img src={country.image} alt={country.name} />
                     <div className="data-container">
@@ -171,6 +177,8 @@ const Home = ({ theme }) => {
                     id={country.id}
                     onClick={openPopup}
                     onKeyDown={openPopup}
+                    role="button"
+                    tabIndex={-6}
                   >
                     <img src={country.image} alt={country.name} />
                     <div className="data-container">
@@ -203,6 +211,8 @@ const Home = ({ theme }) => {
                     id={country.id}
                     onClick={openPopup}
                     onKeyDown={openPopup}
+                    role="button"
+                    tabIndex={-3}
                   >
                     <img src={country.image} alt={country.name} />
                     <div className="data-container">
@@ -239,4 +249,8 @@ export default Home;
 
 Home.propTypes = {
   theme: PropTypes.string,
+};
+
+Home.defaultProps = {
+  theme: 'default',
 };

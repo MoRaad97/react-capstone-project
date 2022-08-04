@@ -20,7 +20,7 @@ const DataSlice = createSlice({
     [loadDataThunk.fulfilled]: (state, action) => {
       const newState = action.payload.map((object) => {
         const loadedLanguages = [];
-        for (const key in object.languages) {
+        for (const key in object.languages) { // eslint-disable-line
           loadedLanguages.push(object.languages[key]);
         }
         return ({
