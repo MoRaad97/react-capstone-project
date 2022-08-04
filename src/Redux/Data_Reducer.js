@@ -19,7 +19,7 @@ const DataSlice = createSlice({
   extraReducers: {
     [loadDataThunk.fulfilled]: (state, action) => {
       const newState = action.payload.map((object) => {
-        const loadedLanguages = []
+        const loadedLanguages = [];
         for (const key in object.languages) {
           loadedLanguages.push(object.languages[key]);
         }
@@ -35,7 +35,7 @@ const DataSlice = createSlice({
           tld: object.tld,
           languages: loadedLanguages.toString(),
           latlng: `[${object.latlng}]`,
-        })
+        });
       });
       return newState;
     },
