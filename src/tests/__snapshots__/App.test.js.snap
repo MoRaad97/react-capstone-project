@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component snapshot test 1`] = `
+Array [
+  <nav
+    className="navbar df-nav"
+  >
+    <div
+      className="container"
+    >
+      <h1>
+        Where in the world?
+      </h1>
+      <h2
+        onClick={[Function]}
+      >
+        White Theme
+      </h2>
+    </div>
+  </nav>,
+  <section
+    className="home home-df"
+  >
+    <div
+      className="container"
+    >
+      <form
+        action=""
+      >
+        <div
+          className="SearchBar-container"
+          onBlur={[Function]}
+          onChange={[Function]}
+        >
+          <input
+            placeholder="Search for a country"
+            type="search"
+          />
+        </div>
+        <div
+          className="filter-container"
+        >
+          <select
+            name="Regions"
+            onChange={[Function]}
+          >
+            <option
+              value="All"
+            >
+              Filter by Region
+            </option>
+            <option
+              value="Africa"
+            >
+              Africa
+            </option>
+            <option
+              value="Americas"
+            >
+              Americas
+            </option>
+            <option
+              value="Asia"
+            >
+              Asia
+            </option>
+            <option
+              value="Europe"
+            >
+              Europe
+            </option>
+            <option
+              value="Oceania"
+            >
+              Oceania
+            </option>
+          </select>
+        </div>
+      </form>
+      <button
+        className="scroll-up"
+        onClick={[Function]}
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        ↑
+      </button>
+      <div
+        className="cards-container"
+      />
+    </div>
+  </section>,
+]
+`;

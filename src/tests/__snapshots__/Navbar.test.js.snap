@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar Component snapshot test 1`] = `
+<nav
+  className="navbar"
+>
+  <div
+    className="container"
+  >
+    <h1>
+      Where in the world?
+    </h1>
+  </div>
+</nav>
+`;

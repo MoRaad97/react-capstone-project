@@ -1,0 +1,141 @@
+.home {
+  background-color: hsl(0, 0%, 98%);
+  padding-top: 20px;
+  min-height: calc(100vh - 75px);
+}
+
+.home-df {
+  color: white;
+  background-color: #f076a5;
+}
+
+.scroll-up {
+  width: 45px;
+  height: 45px;
+  border-radius: 45px;
+  background-color: #ec4c8a;
+  color: white;
+  font-size: 30px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border: none;
+}
+
+.scroll-up-white {
+  background-color: rgb(147 146 146);
+  color: white;
+}
+
+/* search bar */
+.SearchBar-container {
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.SearchBar-container input {
+  width: 100%;
+  height: 3.5rem;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+}
+
+.SearchBar-container input:focus {
+  outline: none;
+}
+
+.SearchBar-container input::placeholder {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+}
+
+/* filter */
+.filter-container {
+  width: 100%;
+}
+
+.filter-container select {
+  margin-bottom: 30px;
+  height: 3.5rem;
+  width: 55%;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-indent: 15px;
+  font-family: "Lato", sans-serif;
+}
+
+.filter-container select:focus {
+  outline: none;
+}
+
+.filter-container option {
+  border: none;
+  font-family: "Lato", sans-serif;
+}
+
+/* cards */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  row-gap: 30px;
+  column-gap: 30px;
+}
+
+.card {
+  margin: 0 auto 30px;
+  width: 85%;
+  height: 410px;
+  background-color: white;
+  box-shadow: 0 0 8px 1px hsl(0deg 0% 85%);
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px 5px hsl(0deg 0% 85%);
+  transition: 0.5s;
+}
+
+.card-df {
+  box-shadow: 0 0 8px 1px #6f3d51;
+  background-color: #ec4c8a;
+  color: white;
+}
+
+.card-df:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px 5px #6f3d51;
+  transition: 0.5s;
+}
+
+.card img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 165px;
+}
+
+.card .data-container {
+  padding: 20px 30px;
+}
+
+.card h2 {
+  margin: 0;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: 900;
+}
+
+.card ul {
+  margin: 15px 0 10px;
+  padding: 0;
+  list-style: none;
+  font-family: "Lato", sans-serif;
+}
+
+.card li {
+  font-size: 17px;
+  margin-bottom: 7px;
+}
