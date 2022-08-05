@@ -1,27 +1,26 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './style/Popup.css';
 
-const Popup = ({
-  trigger = false, keyId = null, theme = 'default', closePopup,
-}) => {
+const Popup = ({ name, theme = 'default' }) => {
   const countries = useSelector((state) => state.countries);
-  return trigger ? (
+  return (
     <>
       {countries.map((country) => { // eslint-disable-line
-        if (keyId === country.id) {
+        if (name === country.name) {
           return (
             <section className={theme === 'default' ? 'popup popup-df' : 'popup'} key={country.id}>
               <div className="container">
-                <button
-                  className={theme === 'default' ? 'close-btn close-btn-df' : 'close-btn'}
-                  type="button"
-                  onClick={() => closePopup()}
-                  onKeyDown={() => closePopup()}
-                >
-                  &#8592; Back
-                </button>
+                <Link to="/">
+                  <button
+                    className={theme === 'default' ? 'close-btn close-btn-df' : 'close-btn'}
+                    type="button"
+                  >
+                    &#8592; Back
+                  </button>
+                </Link>
                 <div className={theme === 'default' ? 'popup-card popup-card-df' : 'popup-card'}>
                   <img src={country.image} alt={country.name} />
                   <div className="popup-data-container">
@@ -75,21 +74,17 @@ const Popup = ({
         }
       })}
     </>
-  ) : '';
+  );
 };
 
 export default Popup;
 
 Popup.propTypes = {
-  trigger: PropTypes.bool,
-  keyId: PropTypes.string,
-  closePopup: PropTypes.func,
+  name: PropTypes.string,
   theme: PropTypes.string,
 };
 
 Popup.defaultProps = {
   theme: 'default',
-  trigger: false,
-  keyId: null,
-  closePopup: undefined,
+  name: null,
 };

@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Popup from './popup';
 import './style/Home.css';
 /* tslint:disable: array-callback-return consistent-return  */
 
-const Home = ({ theme = 'default' }) => {
+const Home = ({ theme = 'default', handleName }) => {
   const [State, setState] = useState({
     filter: 'All',
     search: '',
-    popup: false,
-    keyId: null,
   });
   const [visible, setVisible] = useState(false);
 
@@ -19,22 +17,6 @@ const Home = ({ theme = 'default' }) => {
   const handleFilter = (e) => {
     const { value } = e.target;
     setState({ ...State, filter: value });
-  };
-
-  const openPopup = (e) => {
-    if (e.target.hasAttribute('alt')) {
-      setState({ ...State, popup: true, keyId: e.target.parentElement.id });
-    }
-  };
-
-  if (State.popup) {
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.body.style.overflow = 'auto';
-  }
-
-  const closePopup = () => {
-    setState({ ...State, popup: false });
   };
 
   const handleSearch = (e) => {
@@ -71,7 +53,6 @@ const Home = ({ theme = 'default' }) => {
 
   return (
     <section className={theme === 'default' ? 'home home-df' : 'home'}>
-      <Popup trigger={State.popup} keyId={State.keyId} closePopup={closePopup} theme={theme} />
       <div className="container">
         <form onSubmit={(e) => e.preventDefault()}>
           <div className="SearchBar-container" onChange={handleSearch} onBlur={handleSearch}>
@@ -106,12 +87,12 @@ const Home = ({ theme = 'default' }) => {
                     className={theme === 'default' ? 'card card-df' : 'card'}
                     key={country.id}
                     id={country.id}
-                    onClick={openPopup}
-                    onKeyDown={openPopup}
-                    role="button"
-                    tabIndex={-8}
                   >
-                    <img src={country.image} alt={country.name} />
+                    { /* eslint-disable */
+                    }
+                    <Link to={`${country.name}`}>
+                      <img src={country.image} alt={country.name} onClick={handleName} />
+                    </Link>
                     <div className="data-container">
                       <h2>{country.name}</h2>
                       <ul>
@@ -139,12 +120,10 @@ const Home = ({ theme = 'default' }) => {
                     className={theme === 'default' ? 'card card-df' : 'card'}
                     key={country.id}
                     id={country.id}
-                    onClick={openPopup}
-                    onKeyDown={openPopup}
-                    role="button"
-                    tabIndex={-7}
                   >
-                    <img src={country.image} alt={country.name} />
+                    <Link to={`${country.name}`}>
+                      <img src={country.image} alt={country.name} onClick={handleName} />
+                    </Link>
                     <div className="data-container">
                       <h2>{country.name}</h2>
                       <ul>
@@ -175,12 +154,10 @@ const Home = ({ theme = 'default' }) => {
                     className={theme === 'default' ? 'card card-df' : 'card'}
                     key={country.id}
                     id={country.id}
-                    onClick={openPopup}
-                    onKeyDown={openPopup}
-                    role="button"
-                    tabIndex={-6}
                   >
-                    <img src={country.image} alt={country.name} />
+                    <Link to={`${country.name}`}>
+                      <img src={country.image} alt={country.name} onClick={handleName} />
+                    </Link>
                     <div className="data-container">
                       <h2>{country.name}</h2>
                       <ul>
@@ -209,12 +186,10 @@ const Home = ({ theme = 'default' }) => {
                     className={theme === 'default' ? 'card card-df' : 'card'}
                     key={country.id}
                     id={country.id}
-                    onClick={openPopup}
-                    onKeyDown={openPopup}
-                    role="button"
-                    tabIndex={-3}
                   >
-                    <img src={country.image} alt={country.name} />
+                    <Link to={`${country.name}`}>
+                      <img src={country.image} alt={country.name} onClick={handleName} />
+                    </Link>
                     <div className="data-container">
                       <h2>{country.name}</h2>
                       <ul>
@@ -249,8 +224,10 @@ export default Home;
 
 Home.propTypes = {
   theme: PropTypes.string,
+  handleName: PropTypes.func,
 };
 
 Home.defaultProps = {
   theme: 'default',
+  handleName: undefined,
 };
