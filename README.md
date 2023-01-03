@@ -23,9 +23,7 @@
 - Frontend Mentor [REST Countries API with color theme switcher](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca)
 
 ## Live Demo
-
-- [heroku](https://where-in-the-world-react.herokuapp.com/).
-- [netlify](https://62eba0ab4644760442bdc44c--lovely-phoenix-26cb52.netlify.app/).
+- [Netlify live demo link](https://whereintheworld-moraad.netlify.app/)
 
 ## Video
 Watch this [video](https://www.loom.com/share/c01cba25331e4a86bcf7b8f8817e3772) learn more about the project features.
