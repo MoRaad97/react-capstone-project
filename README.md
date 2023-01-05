@@ -15,6 +15,12 @@
 - Git & GitHub
 - axios
 
+## Screenshots
+![ScreenShot_20230104172044](https://user-images.githubusercontent.com/89518488/210771544-d3b79ad8-33a4-4735-93fe-ed3808b3c20f.png)
+![ScreenShot_20230104172108](https://user-images.githubusercontent.com/89518488/210771548-297b22ad-8c03-4044-ba2b-2dd216ed8815.png)
+![ScreenShot_20230104172358](https://user-images.githubusercontent.com/89518488/210771534-eeffbc20-d334-4e1a-8282-1e4f6145d61e.png)
+![ScreenShot_20230104172310](https://user-images.githubusercontent.com/89518488/210771622-24ba6baa-0aba-4779-ae51-94b0c9e7c663.png)
+![ScreenShot_20230104172303](https://user-images.githubusercontent.com/89518488/210771625-ecf2f30f-bcf9-49d4-bb1e-7857773388b2.png)
 
 ## Design
 
